@@ -5,6 +5,38 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary: #15803d;
+  --primary-foreground: #ffffff;
+  --secondary: #f3f4f6;
+  --secondary-foreground: #1f2937;
+}
+
+@layer base {
+  body {
+    @apply antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+
+  p, span, a, li {
+    @apply font-inter;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600;
+  }
+
+  .btn-secondary {
+    @apply text-sm font-semibold leading-6 text-gray-900 hover:text-green-700;
+  }
+
+  .container {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
 }
 
 @media (prefers-color-scheme: dark) {

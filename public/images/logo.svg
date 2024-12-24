@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180" height="40" viewBox="0 0 180 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Leaf shape -->
+  <path d="M25 5C15 5 5 15 5 25C5 35 15 35 25 35C35 35 35 25 35 15C35 5 25 5 25 5Z" 
+        fill="#14B8A6" 
+        stroke="#0F766E" 
+        stroke-width="2"/>
+  
+  <!-- Stem -->
+  <path d="M25 35C25 35 15 25 25 15" 
+        stroke="#0F766E" 
+        stroke-width="2" 
+        stroke-linecap="round"/>
+  
+  <!-- Text -->
+  <text x="45" y="28" 
+        font-family="Arial, sans-serif" 
+        font-size="24" 
+        font-weight="bold" 
+        fill="#0F766E">
+    EchoVenlig
+  </text>
+</svg>
