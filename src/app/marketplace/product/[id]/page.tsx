@@ -142,16 +142,19 @@ export default function ProductPage() {
               </div>
 
               {/* Sustainability features */}
-              <div className="mt-10">
-                <h3 className="text-sm font-medium text-gray-900">Sustainability Features</h3>
-                <div className="mt-4">
-                  <ul className="list-disc space-y-2 pl-4 text-sm">
-                    {product.sustainabilityFeatures.map((feature) => (
-                      <li key={feature} className="text-gray-600">{feature}</li>
+              {product.sustainabilityFeatures && product.sustainabilityFeatures.length > 0 && (
+                <div className="mt-8">
+                  <h2 className="text-lg font-medium text-gray-900">Sustainability Features</h2>
+                  <ul className="mt-4 space-y-2">
+                    {product.sustainabilityFeatures.map((feature, index) => (
+                      <li key={index} className="flex items-center">
+                        <span className="text-green-500">✓</span>
+                        <span className="ml-2 text-sm text-gray-600">{feature}</span>
+                      </li>
                     ))}
                   </ul>
                 </div>
-              </div>
+              )}
 
               <div className="mt-10 flex gap-4">
                 <div className="flex-1 flex items-center gap-4">
