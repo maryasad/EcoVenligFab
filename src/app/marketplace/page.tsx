@@ -7,40 +7,49 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import LanguageSwitcher from '@/components/ui/LanguageSwitcher';
 import Image from 'next/image';
+import { Product, ProductCondition } from '@/types/product';
 
 // Mock data - replace with actual API call later
-const products = [
+const products: Product[] = [
   {
     id: '1',
-    title: 'Eco-Friendly Cotton T-Shirt',
-    description: 'Made from 100% organic cotton',
-    price: 29.99,
-    category: 'women',
-    condition: 'like-new',
-    image: '/images/products/tshirt.jpg',
-    rating: 4.5,
-    reviews: 12,
-    isHubRepaired: false,
+    title: 'Eco-friendly Sewing Machine',
+    description: 'Professional grade, energy-efficient sewing machine',
+    price: 599.99,
+    images: ['/images/products/sewing-machine.jpg'],
+    category: 'Equipment',
+    condition: 'new' as ProductCondition,
     seller: {
-      name: 'Emma Jensen',
-      type: 'user'
-    }
+      id: 'seller1',
+      name: 'EcoTools Store',
+      type: 'store',
+      rating: 4.8,
+      totalSales: 156,
+      joinedDate: '2023-01-15'
+    },
+    isHubRepaired: true,
+    createdAt: '2024-01-01',
+    tags: ['equipment', 'professional']
   },
   {
     id: '2',
     title: 'Upcycled Denim Jacket',
     description: 'Uniquely repaired and customized by our hub artisans',
     price: 89.99,
+    images: ['/images/products/denim-jacket.jpg'],
     category: 'hubRepaired',
-    condition: 'good',
-    image: '/images/products/denim-jacket.jpg',
-    rating: 5.0,
-    reviews: 8,
-    isHubRepaired: true,
+    condition: 'good' as ProductCondition,
     seller: {
+      id: 'seller2',
       name: 'Copenhagen Repair Hub',
-      type: 'store'
-    }
+      type: 'store',
+      rating: 4.9,
+      totalSales: 201,
+      joinedDate: '2022-06-01'
+    },
+    isHubRepaired: true,
+    createdAt: '2023-09-01',
+    tags: ['upcycled', 'denim']
   },
   // Add more products...
 ];
@@ -93,7 +102,16 @@ export default function MarketplacePage() {
               {products
                 .filter(product => product.isHubRepaired)
                 .map(product => (
-                  <ProductCard key={product.id} {...product} />
+                  <ProductCard 
+                    key={product.id}
+                    id={product.id}
+                    title={product.title}
+                    price={product.price}
+                    image={product.images[0]}
+                    category={product.category}
+                    condition={product.condition}
+                    seller={product.seller}
+                  />
                 ))}
             </div>
           </div>
@@ -226,7 +244,16 @@ export default function MarketplacePage() {
           {products
             .filter(product => !product.isHubRepaired)
             .map(product => (
-              <ProductCard key={product.id} {...product} />
+              <ProductCard 
+                key={product.id}
+                id={product.id}
+                title={product.title}
+                price={product.price}
+                image={product.images[0]}
+                category={product.category}
+                condition={product.condition}
+                seller={product.seller}
+              />
             ))}
         </div>
       </div>
