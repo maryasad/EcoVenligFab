@@ -25,6 +25,7 @@ export interface Product {
   material?: string;
   sustainabilityFeatures: string[];
   seller: Seller;
+  isHubRepaired: boolean;
   createdAt: string;
   updatedAt: string;
 }
