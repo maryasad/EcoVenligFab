@@ -1,64 +1,59 @@
 import type { Product, ProductCondition } from '@/types/product';
 
 // Mock products data - replace with actual API calls in production
-const products: Product[] = [
+export const products: Product[] = [
   {
     id: '1',
-    title: 'Eco-friendly Cotton Dress',
-    description: 'This beautiful dress is made from 100% organic cotton, sourced from sustainable farms. The design emphasizes both comfort and style while maintaining our commitment to environmental responsibility.',
-    price: 45.99,
-    images: ['/images/products/dress-1.jpg', '/images/products/dress-1-alt.jpg', '/images/products/dress-1-detail.jpg'],
+    title: 'Eco-Friendly Summer Dress',
+    description: 'Beautiful summer dress made from sustainable materials. Perfect for warm days and eco-conscious fashion lovers.',
+    price: 89.99,
+    images: ['/images/products/dress.jpg'],
     category: 'Dresses',
-    condition: 'like-new',
-    brand: 'EcoStyle',
-    size: 'M',
-    color: 'Sage Green',
+    condition: 'like-new' as ProductCondition,
     material: '100% Organic Cotton',
-    sustainabilityFeatures: [
-      'Organic Materials',
-      'Fair Trade Certified',
-      'Water-Saving Production',
-      'Recyclable Packaging'
-    ],
     seller: {
-      id: 's1',
-      name: 'Green Fashion Store',
+      id: 'seller1',
+      name: 'EcoStyle Shop',
       type: 'store',
       rating: 4.8,
-      totalSales: 1234,
+      totalSales: 245,
       joinedDate: '2023-01-15'
     },
-    createdAt: '2024-01-19T09:00:00Z',
-    updatedAt: '2024-01-19T09:00:00Z'
+    isHubRepaired: false,
+    createdAt: '2024-01-01',
+    tags: ['summer', 'dress', 'eco-friendly'],
+    sustainabilityFeatures: [
+      'Made from organic cotton',
+      'Low-impact dyes',
+      'Zero-waste packaging'
+    ]
   },
   {
     id: '2',
     title: 'Upcycled Denim Jacket',
-    description: 'A unique piece created from recycled denim. Each jacket is one-of-a-kind and represents our commitment to reducing textile waste.',
-    price: 35.00,
-    images: ['/images/products/jacket-1.jpg', '/images/products/jacket-1-alt.jpg'],
+    description: 'Uniquely repaired and customized by our hub artisans. Each piece tells its own story.',
+    price: 129.99,
+    images: ['/images/products/jacket.jpg'],
     category: 'Outerwear',
-    condition: 'good',
-    brand: 'Reworked',
-    size: 'L',
-    color: 'Blue',
-    material: 'Recycled Denim',
-    sustainabilityFeatures: [
-      'Upcycled Materials',
-      'Zero Waste Production',
-      'Local Craftsmanship'
-    ],
+    condition: 'good' as ProductCondition,
+    material: 'Upcycled Denim',
     seller: {
-      id: 'u1',
-      name: 'Sarah K.',
-      type: 'user',
-      rating: 4.5,
-      totalSales: 45,
-      joinedDate: '2023-06-20'
+      id: 'seller2',
+      name: 'Copenhagen Repair Hub',
+      type: 'store',
+      rating: 4.9,
+      totalSales: 189,
+      joinedDate: '2023-02-01'
     },
-    createdAt: '2024-01-18T15:30:00Z',
-    updatedAt: '2024-01-18T15:30:00Z'
-  },
+    isHubRepaired: true,
+    createdAt: '2024-01-15',
+    tags: ['denim', 'upcycled', 'jacket'],
+    sustainabilityFeatures: [
+      'Upcycled materials',
+      'Local craftsmanship',
+      'Zero-waste design'
+    ]
+  }
 ];
 
 export async function getProducts(options?: {
