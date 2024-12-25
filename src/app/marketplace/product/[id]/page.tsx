@@ -36,11 +36,19 @@ const product: Product = {
   ]
 };
 
+export async function generateStaticParams() {
+  return [
+    {
+      id: product.id,
+    },
+  ];
+}
+
 function classNames(...classes: string[]) {
   return classes.filter(Boolean).join(' ');
 }
 
-export default function ProductPage() {
+export default function ProductPage({ params }: { params: { id: string } }) {
   const [selectedImage, setSelectedImage] = useState(0);
   const [quantity, setQuantity] = useState(1);
   const addItem = useCartStore((state) => state.addItem);
