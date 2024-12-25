@@ -2,6 +2,8 @@
 
 EcoVenligFab (Eco-Friendly Fabrication) is a Next.js-based platform that promotes sustainable and environmentally conscious manufacturing practices. The name combines "Eco" (ecological), "Venlig" (Danish for friendly), and "Fab" (fabrication), reflecting our commitment to eco-friendly manufacturing solutions.
 
+Visit our website: [https://maryasad.github.io/EcoVenligFab](https://maryasad.github.io/EcoVenligFab)
+
 ## Features
 
 - Sustainable manufacturing practices
