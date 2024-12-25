@@ -15,9 +15,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "EchoVenlig - Sustainable Fashion & Textile Recycling",
-  description: "Join the sustainable fashion movement. Buy, sell, and learn about eco-friendly clothing and textile recycling.",
-  keywords: "sustainable fashion, textile recycling, eco-friendly clothing, second-hand clothes, upcycling",
+  title: "EcoVenligFab - Sustainable Manufacturing Solutions",
+  description: "Promoting eco-friendly and sustainable manufacturing practices. Join us in creating a greener future through sustainable fabrication.",
+  keywords: "sustainable manufacturing, eco-friendly fabrication, green technology, sustainable solutions",
 };
 
 export default function RootLayout({
