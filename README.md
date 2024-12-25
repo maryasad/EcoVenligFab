@@ -1,24 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# EcoVenligFab
+
+EcoVenligFab (Eco-Friendly Fabrication) is a Next.js-based platform that promotes sustainable and environmentally conscious manufacturing practices. The name combines "Eco" (ecological), "Venlig" (Danish for friendly), and "Fab" (fabrication), reflecting our commitment to eco-friendly manufacturing solutions.
+
+## Features
+
+- Sustainable manufacturing practices
+- Environmental impact tracking
+- Resource optimization tools
+- Green technology integration
+- Eco-friendly material suggestions
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org) - React framework
+- TypeScript for type safety
+- Tailwind CSS for styling
+- HeadlessUI for accessible components
+- Framer Motion for animations
 
 ## Getting Started
 
-First, run the development server:
+First, install the dependencies:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
+```
+
+Then, run the development server:
+
+```bash
 pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+eco_venlig_fab/
+├── src/           # Source files
+├── public/        # Static assets
+├── image/         # Image assets
+└── pitch/         # Project pitch materials
+```
+
+## Contributing
+
+We welcome contributions that help make manufacturing more sustainable and eco-friendly!
+
+## License
+
+See the [LICENSE](LICENSE) file for details.
 
 ## Learn More
 
