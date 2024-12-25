@@ -11,36 +11,29 @@ import type { Product } from '@/types/product';
 // Mock data - replace with API call
 const product: Product = {
   id: '1',
-  title: 'Eco-friendly Cotton Dress',
-  description: 'This beautiful dress is made from 100% organic cotton, sourced from sustainable farms. The design emphasizes both comfort and style while maintaining our commitment to environmental responsibility.',
-  price: 45.99,
-  images: [
-    '/images/products/dress-1.jpg',
-    '/images/products/dress-1-alt.jpg',
-    '/images/products/dress-1-detail.jpg',
-  ],
+  title: 'Eco-Friendly Summer Dress',
+  description: 'Beautiful summer dress made from sustainable materials. Perfect for warm days and eco-conscious fashion lovers.',
+  price: 89.99,
+  images: ['/images/products/dress.jpg'],
   category: 'Dresses',
-  condition: 'like-new',
-  brand: 'EcoStyle',
-  size: 'M',
-  color: 'Sage Green',
+  condition: 'like-new' as ProductCondition,
   material: '100% Organic Cotton',
-  sustainabilityFeatures: [
-    'Organic Materials',
-    'Fair Trade Certified',
-    'Water-Saving Production',
-    'Recyclable Packaging'
-  ],
   seller: {
-    id: 's1',
-    name: 'Green Fashion Store',
+    id: 'seller1',
+    name: 'EcoStyle Shop',
     type: 'store',
     rating: 4.8,
-    totalSales: 1234,
+    totalSales: 245,
     joinedDate: '2023-01-15'
   },
-  createdAt: '2024-01-19T09:00:00Z',
-  updatedAt: '2024-01-19T09:00:00Z'
+  isHubRepaired: false,
+  createdAt: '2024-01-01',
+  tags: ['summer', 'dress', 'eco-friendly'],
+  sustainabilityFeatures: [
+    'Made from organic cotton',
+    'Low-impact dyes',
+    'Zero-waste packaging'
+  ]
 };
 
 function classNames(...classes: string[]) {
