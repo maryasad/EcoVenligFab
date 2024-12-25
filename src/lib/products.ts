@@ -56,23 +56,39 @@ export const products: Product[] = [
   }
 ];
 
-export async function getProducts(options?: {
+interface ProductFilterOptions {
   category?: string;
-  condition?: ProductCondition;
+  condition?: ProductCondition | 'all';
+  minPrice?: number;
+  maxPrice?: number;
+  isHubRepaired?: boolean;
   sortBy?: 'newest' | 'price-low' | 'price-high';
-}) {
+}
+
+export async function getProducts(options?: ProductFilterOptions): Promise<Product[]> {
   // Simulate API delay
   await new Promise(resolve => setTimeout(resolve, 1000));
 
   let filteredProducts = [...products];
 
-  // Apply filters
-  if (options?.category && options.category !== 'All') {
+  if (options?.category && options.category !== 'all') {
     filteredProducts = filteredProducts.filter(p => p.category === options.category);
   }
 
-  if (options?.condition && options.condition !== 'All') {
+  if (options?.condition && options.condition !== 'all') {
     filteredProducts = filteredProducts.filter(p => p.condition === options.condition);
+  }
+
+  if (options?.minPrice !== undefined) {
+    filteredProducts = filteredProducts.filter(p => p.price >= options.minPrice!);
+  }
+
+  if (options?.maxPrice !== undefined) {
+    filteredProducts = filteredProducts.filter(p => p.price <= options.maxPrice!);
+  }
+
+  if (options?.isHubRepaired !== undefined) {
+    filteredProducts = filteredProducts.filter(p => p.isHubRepaired === options.isHubRepaired);
   }
 
   // Apply sorting
