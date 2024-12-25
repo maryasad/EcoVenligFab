@@ -19,15 +19,12 @@ export interface Product {
   images: string[];
   category: string;
   condition: ProductCondition;
-  brand?: string;
-  size?: string;
-  color?: string;
-  material?: string;
-  sustainabilityFeatures: string[];
   seller: Seller;
   isHubRepaired: boolean;
   createdAt: string;
-  updatedAt: string;
+  tags: string[];
+  sustainabilityFeatures?: string[];
+  material?: string;
 }
 
 export interface ProductReview {
