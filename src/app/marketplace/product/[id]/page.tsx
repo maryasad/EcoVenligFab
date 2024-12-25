@@ -124,30 +124,16 @@ export default function ProductPage() {
                   <p className="text-sm text-gray-600">{product.description}</p>
                 </div>
                 <dl className="mt-4 space-y-3">
-                  {product.brand && (
-                    <div className="flex items-center">
-                      <dt className="text-sm font-medium text-gray-500 w-24">Brand:</dt>
-                      <dd className="text-sm text-gray-900">{product.brand}</dd>
-                    </div>
-                  )}
-                  {product.size && (
-                    <div className="flex items-center">
-                      <dt className="text-sm font-medium text-gray-500 w-24">Size:</dt>
-                      <dd className="text-sm text-gray-900">{product.size}</dd>
-                    </div>
-                  )}
-                  {product.color && (
-                    <div className="flex items-center">
-                      <dt className="text-sm font-medium text-gray-500 w-24">Color:</dt>
-                      <dd className="text-sm text-gray-900">{product.color}</dd>
-                    </div>
-                  )}
                   {product.material && (
                     <div className="flex items-center">
                       <dt className="text-sm font-medium text-gray-500 w-24">Material:</dt>
                       <dd className="text-sm text-gray-900">{product.material}</dd>
                     </div>
                   )}
+                  <div className="flex items-center">
+                    <dt className="text-sm font-medium text-gray-500 w-24">Category:</dt>
+                    <dd className="text-sm text-gray-900">{product.category}</dd>
+                  </div>
                   <div className="flex items-center">
                     <dt className="text-sm font-medium text-gray-500 w-24">Condition:</dt>
                     <dd className="text-sm text-gray-900 capitalize">{product.condition}</dd>
