@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { StarIcon } from '@heroicons/react/20/solid';
 import { HeartIcon, ShareIcon } from '@heroicons/react/24/outline';
 import { useCartStore } from '@/store/cart';
-import type { Product } from '@/types/product';
+import type { Product, ProductCondition } from '@/types/product';
 
 // Mock data - replace with API call
 const product: Product = {
